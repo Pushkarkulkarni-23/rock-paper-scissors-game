@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     text-align: center;
+    box-sizing: border-box;  /* ADDED */
 }
 
 h1{
@@ -34,6 +35,7 @@ img{
     align-items: center;
     gap: 3rem;
     margin-top: 3rem;
+    flex-wrap: wrap;   /* ADDED */
 }
 
 .choice:hover {
@@ -67,9 +69,12 @@ img{
     background-color:#081b31;
     color: white;
     font-size: 2rem;
-    display: inline;
+    display: inline-block;
     padding: 1rem;
     border-radius: 1rem;
+    max-width: 90%;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 #refresh{
@@ -80,4 +85,25 @@ img{
 #refresh:hover{
     opacity: 0.5;
     cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  #msg {
+    font-size: 1.2rem;
+  }
+
+  .msg-container {
+    margin-top: 3rem;
+  }
+
+  .choice {
+    height: 110px;    /* ADDED */
+    width: 110px;
+  }
+
+  img {
+    height: 100px;    /* ADDED */
+    width: 100px;
+  }
+
 }
